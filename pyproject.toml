@@ -1,0 +1,22 @@
+[project]
+name = "audio-musicgen"
+version = "0.1.0"
+description = "Generacion de musica (jazz) con MusicGen a partir de texto"
+readme = "README.md"
+authors = [
+    { name = "Juan David Ortega Rincon", email = "160252314+Lancelot0079@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy<2",
+    "scipy>=1.17.1",
+    "torch==2.2.2",
+    "transformers==4.57.1",
+]
+
+[project.scripts]
+audio-musicgen = "audio_musicgen:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
